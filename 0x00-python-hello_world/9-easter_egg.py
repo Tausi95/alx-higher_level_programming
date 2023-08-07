@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/python3
 str = '"The Zen of Python", by Tim Peters'
 print(str)
