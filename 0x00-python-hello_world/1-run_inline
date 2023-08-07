@@ -1,0 +1,4 @@
+#!/bin/sh 
+
+# Run the python script using py3 interpreter
+python3 -c "$PYCODE"
