@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-for i in range(10):
-    for j in range(i + 1, 10):
-        print(f"{i}{j}", end="")
-        if i != 8:
-            print(", ", end="")
-        else:
-            print()
+for i in range(0, 10):
+    for j in range(0, 10):
+        if (j > i):
+            if (i + j < 17):
+                print("{:d}{:d}".format((i), (j)), end=", ")
+            else:
+                print("{:d}{:d}".format((i), (j)))

@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-j = [f"{i:02}" for i in range(0, 100)]
-x = ", ".join(j)
-print(x)
+for i in range(0, 100):
+    if (x < 99):
+        print("{:d}".format((i // 10), (x % 10)), end=", ")
+    else:
+        print("{:d}{:d}".format((x // 10), (x % 10)))
