@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+import compileall
+import os
+import sys
+
+if 'PYFILE' not in os.environ:
+    print("Please set the environment variable $PYFILE to the Python script filename.")
+    sys.exit(1)
+
+py_file = os.environ['PYFILE']
+output_file = py_file + 'c'
+
+if not os.path.exists(py_file):
+    print(f"The specified Python file '{py_file}' does not exist.")
+    sys.exit(1)
+
+compileall.compile_file(py_file, force=True)
+
+if os.path.exists(output_file):
+    print(f"Compilation successful. Output file: {output_file}")
+else:
+    print("Compilation failed.")
+
+sys.exit(0)
