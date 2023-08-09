@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-for i in range(25, -1, -1):
-    print("{:c}".format(122 - i), end="")
-    if i % 2 == 0:
-        print("{:c}".format(65 + i), end="")
+j = 0
+for i in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(chr(i - j)), end="")
+    j = 32 if j == 0 else 0
 
 print("")  # A newline at the end
